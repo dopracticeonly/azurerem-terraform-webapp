@@ -3,7 +3,7 @@ resource "azurerm_app_service" "main" {
   name                    = lower(format("app-%s", var.app_service_name))
   resource_group_name     = var.resource_group_name
   location                = var.location
-  app_service_plan_id     = azurerm_app_service_plan.main.id
+  #app_service_plan_id     = azurerm_app_service_plan.main.id
   client_affinity_enabled = var.enable_client_affinity
   https_only              = var.enable_https
   client_cert_enabled     = var.enable_client_certificate
